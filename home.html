@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Erin Lee - Home</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body>
+    <div id="nav">
+      <b id="erinheader">erinclee</b>
+      <ul>
+        <a class="navlink" href="home.html">my work</a>
+        <a class="navlink" href="about.html">about me</a>
+        <a class="navlink" href="resume.html">my resume</a>
+      </ul>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/erin-lee-1495041b3/">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/3rxnlee/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <h1 id="tagline">Hi! I'm Erin, an aspiring UI/UX designer!</h1>
+    <main>
+      <section id="portfolio">
+        <article class="portfolio-item" onclick="openGallery('illustration')">
+          <img src="../img/illustration.png" alt="Illustration" />
+        </article>
+        <article class="portfolio-item" onclick="openGallery('pen')">
+          <img src="../img/pen.png" alt="Pen, Pencil, Charcoal" />
+        </article>
+        <article class="portfolio-item" onclick="openGallery('3d')">
+          <img src="../img/3d.png" alt="3D" />
+        </article>
+        <article class="portfolio-item" onclick="openGallery('design')">
+          <img src="../img/design.png" alt="Design" />
+        </article>
+        <article class="portfolio-item" onclick="openGallery('photography')">
+          <img src="../img/photography.png" alt="Photography" />
+        </article>
+      </section>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      function openGallery(galleryType) {
+        window.location.href = `${galleryType}.html`;
+      }
+    </script>
+  </body>
+</html>
