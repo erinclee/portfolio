@@ -9,9 +9,9 @@
     <div id="nav">
       <b id="erinheader">erinclee</b>
       <ul>
-        <a class="navlink" href="home.html">work</a>
-        <a class="navlink" href="about.html">about</a>
-        <a class="navlink" href="resume.html">resume</a>
+        <a class="navlink" href="home.html">my work</a>
+        <a class="navlink" href="about.html">about me</a>
+        <a class="navlink" href="resume.html">my resume</a>
       </ul>
       <div class="socials">
         <a href="https://www.linkedin.com/in/erin-lee-1495041b3/">
@@ -22,20 +22,23 @@
         </a>
       </div>
     </div>
-    <h1>hi, i'm erin, an aspiring ux/ui designer!</h1>
+    <h1 id="tagline">Hi! I'm Erin, an aspiring UI/UX designer!</h1>
     <main>
       <section id="portfolio">
         <article class="portfolio-item" onclick="openGallery('illustration')">
           <img src="../img/illustration.png" alt="Illustration" />
-          <p>Illustration</p>
         </article>
-        <article class="portfolio-item" onclick="openGallery('pen_pencil_charcoal')">
+        <article class="portfolio-item" onclick="openGallery('pen')">
           <img src="../img/pen.png" alt="Pen, Pencil, Charcoal" />
-          <p>Pen, Pencil, Charcoal</p>
         </article>
         <article class="portfolio-item" onclick="openGallery('3d')">
           <img src="../img/3d.png" alt="3D" />
-          <p>3D</p>
+        </article>
+        <article class="portfolio-item" onclick="openGallery('design')">
+          <img src="../img/design.png" alt="Design" />
+        </article>
+        <article class="portfolio-item" onclick="openGallery('photography')">
+          <img src="../img/photography.png" alt="Photography" />
         </article>
       </section>
     </main>
@@ -50,32 +53,9 @@
     ></script>
 
     <script>
-     function openGallery(category) {
-  // Define your gallery URL based on the clicked category
-  let galleryURL;
-  switch (category) {
-    case 'illustration':
-      galleryURL = 'gallery.html';
-      break;
-    // Add more cases for other categories as needed
-    default:
-      // Default behavior if no matching category
-      galleryURL = 'gallery.html';
-  }
-
-  // Pass image URLs to the gallery page
-  const imageUrls = [
-    '../img/Illust1.jpeg',
-    '../img/illustration2.jpg',
-    // Add more image URLs as needed
-  ];
-
-  // Convert image URLs to a comma-separated string
-  const imageUrlsString = imageUrls.join(',');
-
-  // Redirect to the corresponding gallery page with image URLs
-  window.location.href = `${galleryURL}?img=${encodeURIComponent(imageUrlsString)}`;
-}
+      function openGallery(galleryType) {
+        window.location.href = `${galleryType}.html`;
+      }
     </script>
   </body>
 </html>
